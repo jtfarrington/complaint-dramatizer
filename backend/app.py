@@ -31,7 +31,7 @@ def dramatize():
             max_tokens=1000,
             messages=[{
                 "role": "user",
-                "content": f'Transform this mundane complaint into overly dramatic Shakespearean prose. Make it theatrical, flowery, and absurdly overdramatic. Use thee/thou, metaphors, and tragedy. Keep it to 2-3 sentences: "{complaint}"'
+                "content": f'Transform this mundane complaint into overly dramatic Shakespearean prose. Make it theatrical, flowery, and absurdly overdramatic. Use thee/thou, metaphors, and tragedy. Keep it to 1-2 sentences: "{complaint}"'
             }]
         )
         
