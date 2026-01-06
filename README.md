@@ -193,9 +193,9 @@ MIT License - feel free to use this project however you'd like!
 
 ## Links
 
-- **Live App:** [https://jtfarrington.github.io/complaint-dramatizer/](https://YOUR_USERNAME.github.io/complaint-dramatizer/)
+- **Live App:** [https://jtfarrington.github.io/complaint-dramatizer/](https://jtfarrington.github.io/complaint-dramatizer/)
 - **Backend API:** [https://complaint-dramatizer-backend.onrender.com](https://complaint-dramatizer-backend.onrender.com)
-- **Repository:** [https://github.com/jtfarrington/complaint-dramatizer](https://github.com/YOUR_USERNAME/complaint-dramatizer)
+- **Repository:** [https://github.com/jtfarrington/complaint-dramatizer](https://github.com/jtfarrington/complaint-dramatizer)
 
 ---
 
