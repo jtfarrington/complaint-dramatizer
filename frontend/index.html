@@ -130,23 +130,23 @@
             output.innerHTML = '<p class="loading">Transforming your grievance into theatrical prose...</p>';
             
             try {
-                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                // Call our Flask backend instead of Anthropic directly
+                const response = await fetch('http://127.0.0.1:5000/api/dramatize', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        model: 'claude-sonnet-4-20250514',
-                        max_tokens: 1000,
-                        messages: [{
-                            role: 'user',
-                            content: `Transform this mundane complaint into overly dramatic Shakespearean prose. Make it theatrical, flowery, and absurdly overdramatic. Use thee/thou, metaphors, and tragedy. Keep it to 2-3 sentences: "${input}"`
-                        }]
+                        complaint: input
                     })
                 });
                 
+                if (!response.ok) {
+                    throw new Error('Failed to dramatize complaint');
+                }
+                
                 const data = await response.json();
-                const dramaticText = data.content[0].text;
+                const dramaticText = data.dramatic_text;
                 
                 output.innerHTML = `<p>${dramaticText}</p>`;
                 
@@ -158,7 +158,7 @@
             }
         }
         
-        // Allow Enter key to trigger dramatization (optional convenience)
+        // Allow Ctrl+Enter to trigger dramatization
         document.getElementById('complaintInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter' && e.ctrlKey) {
                 dramatize();
