@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Allow frontend to make requests to backend
+CORS(app, origins=['*'])  # Allow frontend to make requests to backend
 
 # Initialize rate limiter
 limiter = Limiter(
