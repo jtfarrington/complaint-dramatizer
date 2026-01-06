@@ -9,7 +9,7 @@ Has your coffee gone cold? Did you stub your toe on the bedframe this morning? F
 
 ## Screenshot
 
-
+<img width="1028" height="773" alt="Screenshot 2026-01-06 152313" src="https://github.com/user-attachments/assets/b87f8ee5-97a9-41f4-ba9d-41e76ca99426" />
 
 ## Features
 
